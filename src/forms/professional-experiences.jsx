@@ -8,6 +8,7 @@ import {
   TextInput,
 } from "@mantine/core";
 import { FormSectionTitle } from "../components/form-section-title";
+import { DateInput } from "@mantine/dates";
 
 export const FormProfessionalExperiences = () => {
   return (
@@ -29,10 +30,10 @@ export const FormProfessionalExperiences = () => {
             <TextInput label="Cargo" />
           </Grid.Col>
           <Grid.Col span={{ xs: 12, md: 3 }}>
-            <TextInput label="Data de início" />
+            <DateInput placeholder="DD/MM/YYYY" label="Data de início" />
           </Grid.Col>
           <Grid.Col span={{ xs: 12, md: 3 }}>
-            <TextInput label="Data da saída" />
+            <DateInput placeholder="DD/MM/YYYY" label="Data da saída" />
           </Grid.Col>
           <Grid.Col span={{ xs: 12, md: 6 }} align="flex-end">
             <Checkbox.Group label="Situação">

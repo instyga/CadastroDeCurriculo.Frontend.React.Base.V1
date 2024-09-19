@@ -34,7 +34,11 @@ export const FormPersonalData = () => {
           <TextInput label="Naturalidade" />
         </Grid.Col>
         <Grid.Col span={{ xs: 12, md: 3 }}>
-          <DateInput valueFormat="DD/MM/YYYY" label="Data de Nascimento" />
+          <DateInput
+            valueFormat="DD/MM/YYYY"
+            placeholder="DD/MM/YYYY"
+            label="Data de Nascimento"
+          />
         </Grid.Col>
         <Grid.Col span={{ xs: 12, md: 6 }}>
           <TextInput label="E-mail" />

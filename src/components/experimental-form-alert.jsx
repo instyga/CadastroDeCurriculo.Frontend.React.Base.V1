@@ -1,17 +1,17 @@
 import { Alert } from "@mantine/core";
 import { IconAlertCircle } from "@tabler/icons-react";
 import { useState } from "react";
+import { getFromStorage } from "../helpers/get-from-storage";
+import { saveToStorage } from "../helpers/save-to-storage";
 
 const alertClosedKey = "alert-closed";
 
 export const ExperimentalFormAlert = () => {
-  const [isClosed, setIsClosed] = useState(
-    localStorage.getItem(alertClosedKey) || false
-  );
+  const [isClosed, setIsClosed] = useState(!!getFromStorage(alertClosedKey));
 
   const handleClose = () => {
     setIsClosed(true);
-    localStorage.setItem(alertClosedKey, true);
+    saveToStorage(alertClosedKey, true);
   };
 
   return (

@@ -5,6 +5,7 @@ import { FormProfessionalExperiences } from "../forms/professional-experiences";
 import { FormScholarshipDetails } from "../forms/scholarship-details";
 import { ProfessionalExperiencesList } from "../forms/professional-experiences-list";
 import { ScholarshipList } from "../forms/scholarship-list";
+import { useFormContext } from "../context/use-form-context";
 
 const experiences_mock = [
   {
@@ -31,18 +32,22 @@ const scholarship_mock = [
 ];
 
 export const Home = () => {
-  return (
-    <Container size="lg">
-      <ExperimentalFormAlert />
-      <FormPersonalData />
-      <>
-        <FormProfessionalExperiences />
-        <ProfessionalExperiencesList experiences={experiences_mock} />
-      </>
-      <>
-        <FormScholarshipDetails />
-        <ScholarshipList scholarships={scholarship_mock} />
-      </>
-    </Container>
-  );
+  const { step, registerStepQuantity } = useFormContext();
+
+  const formSteps = [
+    <ExperimentalFormAlert key={1} />,
+    <FormPersonalData key={2} />,
+    <>
+      <FormProfessionalExperiences />
+      <ProfessionalExperiencesList experiences={experiences_mock} />
+    </>,
+    <>
+      <FormScholarshipDetails />
+      <ScholarshipList scholarships={scholarship_mock} />
+    </>,
+  ];
+
+  registerStepQuantity(formSteps.length);
+
+  return <Container size="lg">{formSteps[step]}</Container>;
 };

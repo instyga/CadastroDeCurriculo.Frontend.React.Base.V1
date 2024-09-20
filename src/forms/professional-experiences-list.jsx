@@ -9,7 +9,7 @@ import {
   Text,
 } from "@mantine/core";
 import { CustomAccordionControl } from "../components/custom-accordion-control";
-import { DataBlock } from "./data-block";
+import { DataBlock } from "../components/data-block";
 
 export const ProfessionalExperiencesList = ({ experiences = [] }) => {
   return (

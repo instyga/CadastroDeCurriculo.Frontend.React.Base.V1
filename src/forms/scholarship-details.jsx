@@ -17,7 +17,7 @@ export const FormScholarshipDetails = () => {
           <FormSectionTitle
             step={3}
             title="Escolaridade"
-            caption="Informações sobre escolaridade"
+            caption="Lista de cursos e graduações"
           />
         }
       >
@@ -32,7 +32,7 @@ export const FormScholarshipDetails = () => {
             <DateInput placeholder="DD/MM/YYYY" label="Data de início" />
           </Grid.Col>
           <Grid.Col span={{ xs: 12, md: 3 }}>
-            <DateInput placeholder="DD/MM/YYYY" label="Data da término" />
+            <DateInput placeholder="DD/MM/YYYY" label="Data do término" />
           </Grid.Col>
           <Grid.Col span={{ xs: 12, md: 6 }} align="flex-end">
             <Checkbox.Group label="Situação">

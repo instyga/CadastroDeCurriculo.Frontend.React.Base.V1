@@ -17,8 +17,8 @@ export const FormProfessionalExperiences = () => {
         legend={
           <FormSectionTitle
             step={2}
-            title="Dados Pessoais"
-            caption="Informações Pessoais de contato"
+            title="Experiência profissional"
+            caption="Lista de experiências profissionais"
           />
         }
       >
